@@ -1,6 +1,7 @@
 import kotlin.math.pow
 
 fun main() {
+    var iterations = 0
 
     class Card (val id: Int, val winningNumbers: List<Int>, val numbers: List<Int>) {
 
@@ -22,6 +23,7 @@ fun main() {
         var scratchCards = -1
 
         fun scratchCards(allCards: List<Card>): Int {
+            iterations++
             if (scratchCards != -1) return scratchCards
 
             var scratchCardsNumberBuilder = 1
@@ -86,4 +88,5 @@ fun main() {
     val input = readInput("Day04")
     part1(input).println()
     part2(input).println()
+    iterations.println()
 }
